@@ -301,7 +301,7 @@ This test cycle comprises all the test cases for the verification of the
 survey strategy
 
 \subsubsection{Software Version/Baseline}
-rubin\_sims version XX
+rubin\_sims version 1.3 or newer
 
 \subsubsection{Configuration}
 Not provided.
@@ -345,34 +345,14 @@ Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Run the Jupyter notebook at
-github.com/lsst-pst/PSTR-001/notebooks/SkyCoverage.ipynb
+Evaluate "SkyCoverage" notebook in PSTR-001
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Confirm Asky \textgreater{} 15000 sq degrees.\\
-Confirm Visits \textgreater{} 750.\\
-\strut \\
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
+Asky \textgreater= 18000 sq degrees (15000 sq degrees minimum)\\
+Nv1Sum \textgreater= 825 visits per pointing (750 minimum)
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -419,31 +399,13 @@ Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Run notebook at GitHub.com/lsst-pst/PSTR-001/notebooks/SkyCoverage.ipynb
+Evaluate SkyCoverage notebook in PSTR-001
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Confirm Area Rapid revisit is \textgreater2000 sq deg.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
+RVA1 \textgreater= 2000 sq degrees
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -485,32 +447,13 @@ Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Run notebook at
-GitHub.com/lsst-pst/PSTR-001/notebooks/Parallax\_ProperMotion.ipynb
+Evaluate "Parallax\_ProperMotion" notebook in PSTR-001
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Confirm SIGpm meets requirements (1.0mas design, 2.0mas minimum)
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
+SIGpm \textless= 1.0 mas (2.0 mas minimum)
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -551,13 +494,13 @@ Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Run notebook from PSTR\_001
-(github.com/lsst-pst/PSTR-001/notebooks/Time\_Between\_Visits.ipynb)
+Evaluate "Time\_Between\_Visits" notebook in PSTR-001
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
+aveVisitInterval \textless{} 10 s
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -619,32 +562,13 @@ Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Run Jupyter notebook at PSTR-001
-(GitHub.com/lsst-pst/PSTR-001/notebooks/Time\_Between\_Visits.ipynb)
+Evaluate "Time\_Between\_Visits" notebook in PSTR-001
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Confirm medianVisitInterval \textless{} 5s
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
+medVisitInterval \textless{} 5 s
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -688,32 +612,14 @@ Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Run notebook from
-GitHub.com/lsst-pst/PSTR-001/notebooks/Parallax\_ProperMotion.ipynb
+Evaluate "Parallax\_ProperMotion" notebook in PSTR-001
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Confirm SIGpar and SIGparRed meet requirements.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
+SIGpar \textless= 3.0 mas (6.0 mas minimum)\\
+SIGparRed \textless= 6.0 mas (10.0 mas minimum)
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
