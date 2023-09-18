@@ -1,38 +1,98 @@
-\documentclass[DM,lsstdraft,toc]{lsstdoc}
+% generated from JIRA project LVV
+% using template at /usr/share/miniconda/envs/docsteady-env/lib/python3.11/site-packages/docsteady/templates/tpr.latex.jinja2.
+% using docsteady version 0.0.0
+% Please do not edit -- update information in Jira instead
+\documentclass[PSE,lsstdraft,STR,toc]{lsstdoc}
 \usepackage{geometry}
 \usepackage{longtable,booktabs}
 \usepackage{enumitem}
 \usepackage{arydshln}
+\usepackage{attachfile}
+\usepackage{array}
+\usepackage{dashrule}
+\usepackage{pdfpages}
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
 
 \input{meta.tex}
 
+\newcommand{\attachmentsUrl}{https://github.com/\gitorg/\lsstDocType-\lsstDocNum/blob/\gitref/attachments}
 \providecommand{\tightlist}{
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
+\setcounter{tocdepth}{4}
+
+\providecommand{\ul}[1]{\textbf{#1}}
+
 \begin{document}
 
-\def\milestoneName{Deliver Survey Strategy}
-\def\milestoneId{LVV-P105}
-\def\product{Data Management}
+\def\milestoneName{Survey Strategy Acceptance Test Campaign}
+\def\milestoneId{}
+\def\product{Survey Strategy}
 
 \setDocCompact{true}
 
-\title{LVV-P105 Deliver Survey Strategy Test Plan and Report}
+\title{LVV-P105: Survey Strategy Acceptance Test Campaign Test Plan and Report}
 \setDocRef{\lsstDocType-\lsstDocNum}
-\date{\vcsDate}
-\author{Lynne Jones }
+\date{ 2023-09-16 }
+\author{ Lynne Jones }
 
 \input{history_and_info.tex}
 
+
 \setDocAbstract{
-This is a stub test report created from a template.
-The content is being prepared.
+This is the test plan and report for
+\textbf{ Survey Strategy Acceptance Test Campaign},
+an LSST milestone pertaining to the Project System Engineering and Commissioning.\\
+This document is based on content automatically extracted from the Jira test database on \docDate.
+The most recent change to the document repository was on \vcsDate.
 }
+
 
 \maketitle
 
 \section{Introduction}
-Use the GitHub Actions workflow ``docgen from Jira'' to generate this document's content from Jira.
+\label{sect:intro}
+
+
+\subsection{Objectives}
+\label{sect:objectives}
+
+ The primary goal of this acceptance test campaign is to verify those
+requirements pertaining to the survey design.~
+
+
+
+\subsection{System Overview}
+\label{sect:systemoverview}
+
+ This test campaign is intended to verify that the Survey Strategy
+satisfies the requirements on the design of survey outlined in the LSST
+Science Requirements Document ( \href{https://ls.st/lpm-17}{SRD} ),
+ensuring that the survey strategy will deliver the science goals of
+LSST.
+
+
+\subsection{Document Overview}
+\label{sect:docoverview}
+
+This document was generated from Jira, obtaining the relevant information from the
+\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testPlan/LVV-P105}{LVV-P105}
+~Jira Test Plan and related Test Cycles (
+\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCycle/LVV-C259}{LVV-C259}
+).
+
+Section \ref{sect:intro} provides an overview of the test campaign, the system under test (\product{}),
+the applicable documentation, and explains how this document is organized.
+Section \ref{sect:testplan} provides additional information about the test plan, like for example the configuration
+used for this test or related documentation.
+Section \ref{sect:personnel} describes the necessary roles and lists the individuals assigned to them.
+
+Section \ref{sect:overview} provides a summary of the test results, including an overview in Table \ref{table:summary},
+an overall assessment statement and suggestions for possible improvements.
+Section \ref{sect:detailedtestresults} provides detailed results for each step in each test case.
+
+The current status of test plan \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testPlan/LVV-P105}{LVV-P105} in Jira is \textbf{ Draft }.
 
 \subsection{References}
 \label{sect:references}
@@ -40,5 +100,535 @@ Use the GitHub Actions workflow ``docgen from Jira'' to generate this document's
 \bibliography{lsst,refs,books,refs_ads,local}
 
 
-\input{appendix}
+\newpage
+\section{Test Plan Details}
+\label{sect:testplan}
+
+
+\subsection{Data Collection}
+
+  Observing is not required for this test campaign.
+
+\subsection{Verification Environment}
+\label{sect:hwconf}
+  Verification will be performed using the V3.2 simulations of the survey
+cadence.
+
+  \subsection{Entry Criteria}
+  Availability of simulations for baseline survey v3.0\\
+\strut \\
+
+
+
+\subsection{Related Documentation}
+
+
+No additional documentation provided.
+
+
+\subsection{PMCS Activity}
+
+Primavera milestones related to the test campaign:
+\begin{itemize}
+\item None
+\end{itemize}
+
+
+\newpage
+\section{Personnel}
+\label{sect:personnel}
+
+The personnel involved in the test campaign is shown in the following table.
+
+{\small
+\begin{longtable}{p{3cm}p{3cm}p{3cm}p{6cm}}
+\hline
+\multicolumn{2}{r}{T. Plan \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testPlan/LVV-P105}{LVV-P105} owner:} &
+\multicolumn{2}{l}{\textbf{ Lynne Jones } }\\\hline
+\multicolumn{2}{r}{T. Cycle \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCycle/LVV-C259}{LVV-C259} owner:} &
+\multicolumn{2}{l}{\textbf{
+Lynne Jones }
+} \\\hline
+\textbf{Test Cases} & \textbf{Assigned to} & \textbf{Executed by} & \textbf{Additional Test Personnel} \\ \hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2846}{LVV-T2846}
+& {\small Lynne Jones } & {\small Leanne Guy } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2847}{LVV-T2847}
+& {\small Lynne Jones } & {\small  } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2848}{LVV-T2848}
+& {\small Lynne Jones } & {\small  } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2851}{LVV-T2851}
+& {\small Lynne Jones } & {\small  } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2850}{LVV-T2850}
+& {\small Lynne Jones } & {\small  } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2849}{LVV-T2849}
+& {\small Lynne Jones } & {\small  } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
+\end{longtable}
+}
+
+\newpage
+
+\section{Test Campaign Overview}
+\label{sect:overview}
+
+\subsection{Summary}
+\label{sect:summarytable}
+
+{\small
+\begin{longtable}{p{2cm}cp{2.3cm}p{8.6cm}p{2.3cm}}
+\toprule
+\multicolumn{2}{r}{ T. Plan \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testPlan/LVV-P105}{LVV-P105}:} &
+\multicolumn{2}{p{10.9cm}}{\textbf{ Survey Strategy Acceptance Test Campaign }} & Draft \\\hline
+\multicolumn{2}{r}{ T. Cycle \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCycle/LVV-C259}{LVV-C259}:} &
+\multicolumn{2}{p{10.9cm}}{\textbf{ Survey Strategy Acceptance Test Campaign }} & Not Executed \\\hline
+\textbf{Test Cases} &  \textbf{Ver.} & \textbf{Status} & \textbf{Comment} & \textbf{Issues} \\\toprule
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2846}{LVV-T2846}
+&  1
+& Not Executed &
+\begin{minipage}[]{9cm}
+\smallskip
+
+\medskip
+\end{minipage}
+&   \\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2847}{LVV-T2847}
+&  1
+& Not Executed &
+\begin{minipage}[]{9cm}
+\smallskip
+
+\medskip
+\end{minipage}
+&   \\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2848}{LVV-T2848}
+&  1
+& Not Executed &
+\begin{minipage}[]{9cm}
+\smallskip
+
+\medskip
+\end{minipage}
+&   \\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2851}{LVV-T2851}
+&  1
+& Not Executed &
+\begin{minipage}[]{9cm}
+\smallskip
+
+\medskip
+\end{minipage}
+&   \\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2850}{LVV-T2850}
+&  1
+& Not Executed &
+\begin{minipage}[]{9cm}
+\smallskip
+
+\medskip
+\end{minipage}
+&   \\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2849}{LVV-T2849}
+&  1
+& Not Executed &
+\begin{minipage}[]{9cm}
+\smallskip
+
+\medskip
+\end{minipage}
+&   \\\hline
+\caption{Test Campaign Summary}
+\label{table:summary}
+\end{longtable}
+}
+
+\subsection{Overall Assessment}
+\label{sect:overallassessment}
+
+Not yet available.
+
+\subsection{Recommended Improvements}
+\label{sect:recommendations}
+
+Not yet available.
+
+\newpage
+\section{Detailed Test Results}
+\label{sect:detailedtestresults}
+
+\subsection{Test Cycle LVV-C259 }
+
+Open test cycle {\it \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testrun/LVV-C259}{Survey Strategy Acceptance Test Campaign}} in Jira.
+
+Test Cycle name: Survey Strategy Acceptance Test Campaign\\
+Status: Not Executed
+
+This test cycle comprises all the test cases for the verification of the
+survey strategy
+
+\subsubsection{Software Version/Baseline}
+rubin\_sims version 1.3 or newer
+
+\subsubsection{Configuration}
+Not provided.
+
+\subsubsection{Test Cases in LVV-C259 Test Cycle}
+
+\paragraph{ LVV-T2846 - Verify survey will cover Asky = 18000 square degrees to a median number
+of Nv1Sum = 825 visits per pointing. }\mbox{}\\
+
+Version \textbf{1}.
+Status \textbf{Draft}.
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2846}{\textit{ LVV-T2846 } }
+test case in Jira.
+
+Verify that the planned survey strategy will result in sky coverage
+meeting Asky area to a median number of Nv1Sum visits.\\
+The values of Asky and Nv1Sum used in
+\href{https://jira.lsstcorp.org/browse/LVV-308}{LVV-308} are the design
+goals for the survey.\\
+The median number of visits refers to the median number of visits per
+pointing, when calculated across Asky area and is reported via MAF as
+fO\_Nv.\\
+Alternatively, the area on sky are which the minimum number of visits
+per pointing is Nv1Sum can also be calculated, and is reported via MAF
+as fO\_Area.\\
+\strut \\
+
+\textbf{ Preconditions}:\\
+
+
+Execution status: {\bf Not Executed }
+
+Final comment:\\
+
+
+Detailed steps results:
+
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Evaluate "SkyCoverage" notebook in PSTR-001
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Asky \textgreater= 18000 sq degrees (15000 sq degrees minimum)\\
+Nv1Sum \textgreater= 825 visits per pointing (750 minimum)
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+
+\paragraph{ LVV-T2847 - Verify survey will cover RVA1 = 2000 square degrees at timescales
+between fastRevisitMin = 40s to fastRevisitMax = 1800 seconds nearly
+uniformly. }\mbox{}\\
+
+Version \textbf{1}.
+Status \textbf{Draft}.
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2847}{\textit{ LVV-T2847 } }
+test case in Jira.
+
+Verify that the survey strategy will result in coverage of RVA1 at
+timescales between fastRevisitMin and fastRevisitMax in a satisfactory
+manner.\\
+The original statement of "near uniformity" over this time span does not
+account for the peak in this timescale caused by standard pairs of
+visits; (40s to 1800s=30 minutes; current pairs are acquired at between
+20-30 minutes). The intent was to make sure that there was sufficient
+coverage at timescales below the pair timing, rather than strictly
+providing "uniform" coverage. The metrics in rubin\_sim.maf have been
+written to account for the intent of the requirement -\/- that there are
+a significant fraction of visits in the timespan 40s - 20 minutes, as
+well as visits between 20 - 30 minutes.
+
+\textbf{ Preconditions}:\\
+
+
+Execution status: {\bf Not Executed }
+
+Final comment:\\
+
+
+Detailed steps results:
+
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Evaluate SkyCoverage notebook in PSTR-001
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+RVA1 \textgreater= 2000 sq degrees
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+
+\paragraph{ LVV-T2848 - Verify that the survey strategy distributes observations such that the
+median proper motion accuracy per coordinate across the main survey area
+will be at least SIGpm = 1.0 mas for sources r\textless24. }\mbox{}\\
+
+Version \textbf{1}.
+Status \textbf{Draft}.
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2848}{\textit{ LVV-T2848 } }
+test case in Jira.
+
+Verify the survey strategy distributes observations such that the median
+proper motion accuracy per coordinate across the main survey area will
+be at least SIGpm = 1.0 mas for sources r\textless24.\\
+Survey simulations can estimate astrometric accuracy at r=24.0 for each
+visit, and then estimate the accuracy of a fit for proper motion
+(accounting for parallax factor) using the time distribution of the
+visits at each point in the main survey.
+
+\textbf{ Preconditions}:\\
+
+
+Execution status: {\bf Not Executed }
+
+Final comment:\\
+
+
+Detailed steps results:
+
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Evaluate "Parallax\_ProperMotion" notebook in PSTR-001
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+SIGpm \textless= 1.0 mas (2.0 mas minimum)
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+
+\paragraph{ LVV-T2851 - Verify the average time between successive visits over the full set of
+survey observations, through a survey simulation. }\mbox{}\\
+
+Version \textbf{1}.
+Status \textbf{Draft}.
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2851}{\textit{ LVV-T2851 } }
+test case in Jira.
+
+Verify the average expected time between successive visits, as predicted
+by survey simulations.\\
+\strut \\
+Survey simulations use a model of the telescope to estimate slew times
+(including filter change times), coupled with scheduler choices for each
+successive visit. The times between successive visits can be evaluated
+from these simulations.
+
+\textbf{ Preconditions}:\\
+
+
+Execution status: {\bf Not Executed }
+
+Final comment:\\
+
+
+Detailed steps results:
+
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Evaluate "Time\_Between\_Visits" notebook in PSTR-001
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+aveVisitInterval \textless{} 10 s
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Confirm aveTimeInterval \textless{} 10s\\
+\strut \\
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+
+\paragraph{ LVV-T2850 - Verify the median expected time between successive visits, as predicted
+by survey simulations. }\mbox{}\\
+
+Version \textbf{1}.
+Status \textbf{Draft}.
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2850}{\textit{ LVV-T2850 } }
+test case in Jira.
+
+Verify the median expected time between successive visits, as predicted
+by survey simulations.\\
+\strut \\
+Survey simulations use a model of the telescope to estimate slew times
+(including filter change times), coupled with scheduler choices for each
+successive visit. The times between successive visits can be evaluated
+from these simulations.\\
+\strut \\
+
+\textbf{ Preconditions}:\\
+
+
+Execution status: {\bf Not Executed }
+
+Final comment:\\
+
+
+Detailed steps results:
+
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Evaluate "Time\_Between\_Visits" notebook in PSTR-001
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+medVisitInterval \textless{} 5 s
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+
+\paragraph{ LVV-T2849 - Verify the survey strategy distributes observations such that the
+parallax uncertainty across the main survey area will be no more than
+SIGpar = 3.0 mas, or SIGparRed = 6.0 mas in y band for sources
+r\textless24. }\mbox{}\\
+
+Version \textbf{1}.
+Status \textbf{Draft}.
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2849}{\textit{ LVV-T2849 } }
+test case in Jira.
+
+Verify the survey strategy distributes observations such that the
+parallax uncertainty across the main survey area will be no more than
+SIGpar = 3.0 mas, or SIGparRed = 6.0 mas in y band for sources
+r\textless24.\\
+Survey simulations can estimate astrometric accuracy at r=24.0 for each
+visit, and then estimate the uncertainty in resulting parallax fits
+using the time distribution of the visits at each point in the main
+survey.
+
+\textbf{ Preconditions}:\\
+
+
+Execution status: {\bf Not Executed }
+
+Final comment:\\
+
+
+Detailed steps results:
+
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Evaluate "Parallax\_ProperMotion" notebook in PSTR-001
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+SIGpar \textless= 3.0 mas (6.0 mas minimum)\\
+SIGparRed \textless= 6.0 mas (10.0 mas minimum)
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+
+
+
+\input{appendix.tex}
 \end{document}
